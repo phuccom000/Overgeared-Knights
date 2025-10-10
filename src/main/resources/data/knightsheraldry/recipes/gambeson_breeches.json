@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "LLL",
+    "L L",
+    "L L"
+  ],
+  "key": {
+    "L": {
+      "item": "overknights:woolen_patch"
+    }
+  },
+  "result": {
+    "item": "knightsheraldry:gambeson_breeches",
+    "count": 1
+  }
+}

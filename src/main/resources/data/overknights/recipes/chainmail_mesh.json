@@ -1,0 +1,20 @@
+{
+  "type": "overgeared:forging",
+  "category": "misc",
+  "hammering": 3,
+  "has_quality": false,
+  "needs_minigame": false,
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:chain"
+    }
+  },
+  "result": {
+    "item": "overknights:chainmail_mesh"
+  },
+  "show_notification": true
+}

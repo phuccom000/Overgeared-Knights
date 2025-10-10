@@ -1,0 +1,28 @@
+{
+  "type": "overgeared:forging",
+  "category": "armors",
+  "hammering": 4,
+  "has_polishing": false,
+  "has_quality": true,
+  "minimum_quality": "poor",
+  "need_quenching": false,
+  "needs_minigame": false,
+  "pattern": [
+    "LxL",
+    "L L",
+    "L L"
+  ],
+  "key": {
+    "L": {
+      "item": "overknights:chainmail_mesh"
+    },
+    "x": {
+      "item": "knightsheraldry:gambeson_breeches"
+    }
+  },
+  "requires_blueprint": false,
+  "result": {
+    "item": "knightsheraldry:mail_breeches",
+    "count": 1
+  }
+}

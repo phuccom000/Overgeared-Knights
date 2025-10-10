@@ -1,0 +1,18 @@
+{
+  "type": "overgeared:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:leather"
+    },
+    {
+      "item": "minecraft:shears",
+      "remainder": true,
+      "durability_decrease": 1
+    }
+  ],
+  "result": {
+    "item": "overknights:leather_strip",
+    "count": 4
+  }
+}
+

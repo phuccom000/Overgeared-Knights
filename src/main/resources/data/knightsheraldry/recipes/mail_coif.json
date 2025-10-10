@@ -1,0 +1,27 @@
+{
+  "type": "overgeared:forging",
+  "category": "armors",
+  "hammering": 4,
+  "has_polishing": false,
+  "has_quality": true,
+  "minimum_quality": "poor",
+  "need_quenching": false,
+  "needs_minigame": false,
+  "pattern": [
+    "LLL",
+    "L L",
+    "x x"
+  ],
+  "key": {
+    "L": {
+      "item": "overknights:chainmail_mesh"
+    },
+    "x": {
+      "item": "overknights:leather_strip"
+    }
+  },
+  "result": {
+    "item": "knightsheraldry:mail_coif",
+    "count": 1
+  }
+}

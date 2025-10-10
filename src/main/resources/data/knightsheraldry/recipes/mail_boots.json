@@ -1,0 +1,31 @@
+{
+  "type": "overgeared:forging",
+  "category": "armors",
+  "hammering": 4,
+  "has_polishing": false,
+  "has_quality": true,
+  "minimum_quality": "poor",
+  "need_quenching": false,
+  "needs_minigame": false,
+  "pattern": [
+    "L L",
+    "b b",
+    "a a"
+  ],
+  "key": {
+    "L": {
+      "item": "overknights:chainmail_mesh"
+    },
+    "a": {
+      "item": "overknights:leather_patch"
+    },
+    "b": {
+      "item": "overgeared:iron_plate"
+    }
+  },
+  "requires_blueprint": false,
+  "result": {
+    "item": "knightsheraldry:mail_boots",
+    "count": 1
+  }
+}
