@@ -8,23 +8,20 @@
   "need_quenching": false,
   "needs_minigame": false,
   "pattern": [
-    "LxL",
-    "a a"
+    " i ",
+    "ppp"
   ],
   "key": {
-    "a": {
-      "item": "overknights:chainmail_mesh"
+    "i": {
+      "item": "knightsheraldry:flat_bascinet"
     },
-    "L": {
-      "item": "overknights:leather_patch"
-    },
-    "x": {
-      "item": "knightsheraldry:gambeson_boots"
+    "p": {
+      "item": "overgeared:steel_plate"
     }
   },
-  "requires_blueprint": false,
   "result": {
-    "item": "knightsheraldry:mail_boots",
+    "item": "knightsheraldry:great_bascinet",
     "count": 1
-  }
+  },
+  "show_notification": true
 }

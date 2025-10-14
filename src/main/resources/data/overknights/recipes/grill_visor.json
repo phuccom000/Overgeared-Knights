@@ -1,0 +1,27 @@
+{
+  "type": "overgeared:forging",
+  "category": "misc",
+  "hammering": 3,
+  "has_polishing": false,
+  "has_quality": false,
+  "minimum_quality": "poor",
+  "need_quenching": false,
+  "needs_minigame": false,
+  "pattern": [
+    " # ",
+    "aaa",
+    " # "
+  ],
+  "key": {
+    "#": {
+      "item": "overgeared:steel_plate"
+    },
+    "a": {
+      "item": "overgeared:steel_nugget"
+    }
+  },
+  "result": {
+    "item": "overknights:grill_visor"
+  },
+  "show_notification": true
+}

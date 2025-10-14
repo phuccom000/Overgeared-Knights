@@ -1,7 +1,7 @@
 {
   "type": "overgeared:forging",
   "category": "armors",
-  "hammering": 4,
+  "hammering": 3,
   "has_polishing": false,
   "has_quality": true,
   "minimum_quality": "poor",

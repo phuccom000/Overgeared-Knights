@@ -1,30 +1,29 @@
 {
   "type": "overgeared:forging",
   "category": "armors",
-  "hammering": 3,
+  "hammering": 4,
   "has_polishing": false,
   "has_quality": true,
   "minimum_quality": "poor",
   "need_quenching": false,
   "needs_minigame": false,
   "pattern": [
-    "LLL",
-    "LaL",
-    "x x"
+    "api"
   ],
   "key": {
-    "L": {
-      "item": "overknights:chainmail_mesh"
+    "i": {
+      "item": "knightsheraldry:bascinet_no_visor"
     },
-    "x": {
-      "item": "overknights:leather_strip"
+    "p": {
+      "item": "overknights:dual_slit_visor"
     },
     "a": {
-      "item": "knightsheraldry:quilted_coif"
+      "item": "overgeared:steel_nugget"
     }
   },
   "result": {
-    "item": "knightsheraldry:mail_coif",
+    "item": "knightsheraldry:bascinet",
     "count": 1
-  }
+  },
+  "show_notification": true
 }

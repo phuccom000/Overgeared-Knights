@@ -47,6 +47,10 @@ public class OverKnights
     public static final RegistryObject<Item> LEATHER_STRIP = ITEMS.register("leather_strip", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> LEATHER_PATCH = ITEMS.register("leather_patch", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> WOOLEN_PATCH = ITEMS.register("woolen_patch", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> TASSETS = ITEMS.register("tassets", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> SINGLE_SLIT_VISOR = ITEMS.register("single_slit_visor", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> DUAL_SLIT_VISOR = ITEMS.register("dual_slit_visor", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> GRILL_VISOR = ITEMS.register("grill_visor", () -> new Item(new Item.Properties()));
 
     // Creates a creative tab with the id "overknights:overknights_tab" for the example item, that is placed after the combat tab
     public static final RegistryObject<CreativeModeTab> OVERKNIGHTS = CREATIVE_MODE_TABS.register("overknights_tab", () -> CreativeModeTab.builder()
@@ -58,6 +62,10 @@ public class OverKnights
                 output.accept(LEATHER_STRIP.get());
                 output.accept(LEATHER_PATCH.get());
                 output.accept(WOOLEN_PATCH.get());
+                output.accept(TASSETS.get());
+                output.accept(SINGLE_SLIT_VISOR.get());
+                output.accept(DUAL_SLIT_VISOR.get());
+                output.accept(GRILL_VISOR.get());
             }).build());
 
     public OverKnights(FMLJavaModLoadingContext context)

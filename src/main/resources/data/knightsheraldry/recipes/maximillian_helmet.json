@@ -1,0 +1,34 @@
+{
+  "type": "overgeared:forging",
+  "category": "armors",
+  "hammering": 4,
+  "has_polishing": false,
+  "has_quality": true,
+  "minimum_quality": "poor",
+  "need_quenching": false,
+  "needs_minigame": false,
+  "pattern": [
+    "iii",
+    "pap",
+    "bbb"
+  ],
+  "key": {
+    "i": {
+      "item": "overgeared:steel_ingot"
+    },
+    "a": {
+      "item": "overknights:grill_visor"
+    },
+    "p": {
+      "item": "overgeared:steel_plate"
+    },
+    "b": {
+      "item": "overgeared:steel_nugget"
+    }
+  },
+  "result": {
+    "item": "knightsheraldry:maximillian_helmet",
+    "count": 1
+  },
+  "show_notification": true
+}

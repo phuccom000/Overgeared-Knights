@@ -1,0 +1,24 @@
+{
+  "type": "overgeared:forging",
+  "category": "misc",
+  "hammering": 3,
+  "has_polishing": false,
+  "has_quality": false,
+  "minimum_quality": "poor",
+  "need_quenching": false,
+  "needs_minigame": false,
+  "pattern": [
+    " # ",
+    "# #",
+    " # "
+  ],
+  "key": {
+    "#": {
+      "item": "overgeared:steel_plate"
+    }
+  },
+  "result": {
+    "item": "overknights:single_slit_visor"
+  },
+  "show_notification": true
+}

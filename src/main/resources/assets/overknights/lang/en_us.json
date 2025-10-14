@@ -3,5 +3,9 @@
   "item.overknights.chainmail_mesh": "Chainmail Mesh",
   "item.overknights.leather_strip": "Leather Strip",
   "item.overknights.leather_patch": "Leather Patch",
-  "item.overknights.woolen_patch": "Woolen Patch"
+  "item.overknights.woolen_patch": "Woolen Patch",
+  "item.overknights.tassets": "Tassets",
+  "item.overknights.single_slit_visor": "Single Slit Visor",
+  "item.overknights.dual_slit_visor": "Dual Slit Visor",
+  "item.overknights.grill_visor": "Grill Visor"
 }

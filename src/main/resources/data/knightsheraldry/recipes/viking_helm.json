@@ -1,0 +1,34 @@
+{
+  "type": "overgeared:forging",
+  "category": "armors",
+  "hammering": 4,
+  "has_polishing": false,
+  "has_quality": true,
+  "minimum_quality": "poor",
+  "need_quenching": false,
+  "needs_minigame": false,
+  "pattern": [
+    " x ",
+    "pbp",
+    "a a"
+  ],
+  "key": {
+    "x": {
+      "item": "overgeared:steel_ingot"
+    },
+    "p": {
+      "item": "overgeared:steel_plate"
+    },
+    "a": {
+      "item": "overknights:leather_strip"
+    },
+    "b": {
+      "item": "overgeared:steel_nugget"
+    }
+  },
+  "result": {
+    "item": "knightsheraldry:viking_helm",
+    "count": 1
+  },
+  "show_notification": true
+}

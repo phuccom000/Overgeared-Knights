@@ -46,6 +46,10 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(OverKnights.LEATHER_STRIP);
         simpleItem(OverKnights.LEATHER_PATCH);
         simpleItem(OverKnights.WOOLEN_PATCH);
+        simpleItem(OverKnights.SINGLE_SLIT_VISOR);
+        simpleItem(OverKnights.DUAL_SLIT_VISOR);
+        simpleItem(OverKnights.TASSETS);
+        simpleItem(OverKnights.GRILL_VISOR);
     }
 
 
