@@ -8,20 +8,29 @@
   "need_quenching": false,
   "needs_minigame": false,
   "pattern": [
-    " i ",
-    "ppp"
+    "  x",
+    "xbx",
+    "aca"
   ],
   "key": {
     "i": {
-      "item": "knightsheraldry:houndskull"
-    },
-    "p": {
       "item": "overgeared:steel_plate"
+    },
+    "x": {
+      "item": "overgeared:steel_ingot"
+    },
+    "a": {
+      "item": "overgeared:steel_block"
+    },
+    "b": {
+      "item": "overknights:leather_patch"
+    },
+    "c": {
+      "item": "overknights:woolen_patch"
     }
   },
   "result": {
-    "item": "knightsheraldry:great_houndskul_bascinet",
+    "item": "knightsheraldry:horse_barding",
     "count": 1
-  },
-  "show_notification": true
+  }
 }

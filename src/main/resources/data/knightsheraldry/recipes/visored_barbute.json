@@ -1,26 +1,25 @@
 {
   "type": "overgeared:forging",
   "category": "armors",
-  "hammering": 3,
+  "hammering": 4,
   "has_polishing": false,
   "has_quality": true,
   "minimum_quality": "poor",
   "need_quenching": false,
   "needs_minigame": false,
   "pattern": [
-    " i ",
-    "ppp"
+    "pi"
   ],
   "key": {
     "i": {
-      "item": "knightsheraldry:houndskull"
+      "item": "knightsheraldry:barbute"
     },
     "p": {
-      "item": "overgeared:steel_plate"
+      "item": "overknights:dual_slit_visor"
     }
   },
   "result": {
-    "item": "knightsheraldry:great_houndskul_bascinet",
+    "item": "knightsheraldry:visored_barbute",
     "count": 1
   },
   "show_notification": true

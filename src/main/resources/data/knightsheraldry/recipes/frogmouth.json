@@ -1,26 +1,27 @@
 {
   "type": "overgeared:forging",
   "category": "armors",
-  "hammering": 3,
+  "hammering": 4,
   "has_polishing": false,
   "has_quality": true,
   "minimum_quality": "poor",
   "need_quenching": false,
   "needs_minigame": false,
   "pattern": [
-    " i ",
+    "iii",
+    "i i",
     "ppp"
   ],
   "key": {
     "i": {
-      "item": "knightsheraldry:houndskull"
+      "item": "overgeared:steel_ingot"
     },
     "p": {
       "item": "overgeared:steel_plate"
     }
   },
   "result": {
-    "item": "knightsheraldry:great_houndskul_bascinet",
+    "item": "knightsheraldry:frogmouth",
     "count": 1
   },
   "show_notification": true

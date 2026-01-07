@@ -3,25 +3,24 @@
   "category": "armors",
   "hammering": 3,
   "has_polishing": false,
-  "has_quality": true,
+  "has_quality": false,
   "minimum_quality": "poor",
   "need_quenching": false,
   "needs_minigame": false,
   "pattern": [
-    " i ",
-    "ppp"
+    "x x",
+    "L L"
   ],
   "key": {
-    "i": {
-      "item": "knightsheraldry:houndskull"
+    "x": {
+      "item": "overgeared:steel_nugget"
     },
-    "p": {
-      "item": "overgeared:steel_plate"
+    "L": {
+      "item": "overknights:leather_strip"
     }
   },
   "result": {
-    "item": "knightsheraldry:great_houndskul_bascinet",
+    "item": "knightsheraldry:besagews",
     "count": 1
-  },
-  "show_notification": true
+  }
 }

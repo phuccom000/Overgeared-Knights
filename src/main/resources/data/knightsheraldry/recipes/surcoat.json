@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "iLi",
+    " L ",
+    " i "
+  ],
+  "key": {
+    "L": {
+      "item": "overknights:woolen_patch"
+    },
+    "i": {
+      "item": "minecraft:string"
+    }
+  },
+  "result": {
+    "item": "knightsheraldry:surcoat",
+    "count": 1
+  }
+}

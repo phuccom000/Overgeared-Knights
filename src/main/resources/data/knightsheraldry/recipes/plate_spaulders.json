@@ -8,20 +8,16 @@
   "need_quenching": false,
   "needs_minigame": false,
   "pattern": [
-    " i ",
-    "ppp"
+    "LL",
+    " L"
   ],
   "key": {
-    "i": {
-      "item": "knightsheraldry:houndskull"
-    },
-    "p": {
+    "L": {
       "item": "overgeared:steel_plate"
     }
   },
   "result": {
-    "item": "knightsheraldry:great_houndskul_bascinet",
+    "item": "knightsheraldry:plate_spaulders",
     "count": 1
-  },
-  "show_notification": true
+  }
 }

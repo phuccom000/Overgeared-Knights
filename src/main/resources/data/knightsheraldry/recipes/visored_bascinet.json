@@ -8,19 +8,18 @@
   "need_quenching": false,
   "needs_minigame": false,
   "pattern": [
-    " i ",
-    "ppp"
+    "pi"
   ],
   "key": {
     "i": {
-      "item": "knightsheraldry:houndskull"
+      "item": "knightsheraldry:bascinet"
     },
     "p": {
-      "item": "overgeared:steel_plate"
+      "item": "overknights:dual_slit_visor"
     }
   },
   "result": {
-    "item": "knightsheraldry:great_houndskul_bascinet",
+    "item": "knightsheraldry:visored_bascinet",
     "count": 1
   },
   "show_notification": true

@@ -8,14 +8,19 @@
   "need_quenching": false,
   "needs_minigame": false,
   "pattern": [
-    "pi"
+    "iii",
+    "a a",
+    "p p"
   ],
   "key": {
     "i": {
-      "item": "knightsheraldry:barbute_no_visor"
+      "item": "overgeared:steel_ingot"
+    },
+    "a": {
+      "item": "overgeared:steel_nugget"
     },
     "p": {
-      "item": "overknights:dual_slit_visor"
+      "item": "overgeared:steel_plate"
     }
   },
   "result": {

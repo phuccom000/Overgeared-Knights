@@ -8,20 +8,16 @@
   "need_quenching": false,
   "needs_minigame": false,
   "pattern": [
-    " i ",
-    "ppp"
+    "LL",
+    " L"
   ],
   "key": {
-    "i": {
-      "item": "knightsheraldry:houndskull"
-    },
-    "p": {
-      "item": "overgeared:steel_plate"
+    "L": {
+      "item": "overknights:chainmail_mesh"
     }
   },
   "result": {
-    "item": "knightsheraldry:great_houndskul_bascinet",
+    "item": "knightsheraldry:mail_spaulders",
     "count": 1
-  },
-  "show_notification": true
+  }
 }

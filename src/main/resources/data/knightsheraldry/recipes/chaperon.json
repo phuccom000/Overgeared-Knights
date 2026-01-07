@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "LLL",
+    "  L"
+  ],
+  "key": {
+    "L": {
+      "item": "overknights:woolen_patch"
+    }
+  },
+  "result": {
+    "item": "knightsheraldry:chaperon",
+    "count": 1
+  }
+}

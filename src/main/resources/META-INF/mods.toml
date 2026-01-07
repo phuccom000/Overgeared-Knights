@@ -28,9 +28,9 @@ displayName="OverKnights" #mandatory
 # A URL for the "homepage" for this mod, displayed in the mod UI
 #displayURL="https://change.me.to.your.mods.homepage.example.invalid/" #optional
 # A file name (in the root of the mod JAR) containing a logo for display
-#logoFile="examplemod.png" #optional
+logoFile = "logo.png" #optional
 # A text field displayed in the mod UI
-#credits="" #optional
+credits="Thanks to Condottiere1453 for most of the recipes, lwkysad for commissioning this mod." #optional
 # A text field displayed in the mod UI
 authors="StirDrem" #optional
 # Display Test controls the display for your mod in the server connection screen
@@ -70,7 +70,7 @@ description='''${mod_description}'''
 modId="knightsheraldry"
 mandatory=false
 # This version range declares a minimum of the current minecraft version up to but not including the next major version
-versionRange="[0.6.1,)"
+versionRange="[0.7.3,)"
 ordering="AFTER"
 side="BOTH"
 
@@ -78,7 +78,7 @@ side="BOTH"
 modId="overgeared"
 mandatory=false
 # This version range declares a minimum of the current minecraft version up to but not including the next major version
-versionRange="[1.4.0,)"
+versionRange="[1.4.15,)"
 ordering="AFTER"
 side="BOTH"
 # Features are specific properties of the game environment, that you may want to declare you require. This example declares

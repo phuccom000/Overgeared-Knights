@@ -8,20 +8,19 @@
   "need_quenching": false,
   "needs_minigame": false,
   "pattern": [
-    " i ",
-    "ppp"
+    "i i",
+    "x x"
   ],
   "key": {
     "i": {
-      "item": "knightsheraldry:houndskull"
+      "item": "overgeared:steel_ingot"
     },
-    "p": {
-      "item": "overgeared:steel_plate"
+    "x": {
+      "item": "overgeared:steel_nugget"
     }
   },
   "result": {
-    "item": "knightsheraldry:great_houndskul_bascinet",
+    "item": "knightsheraldry:sabatons",
     "count": 1
-  },
-  "show_notification": true
+  }
 }

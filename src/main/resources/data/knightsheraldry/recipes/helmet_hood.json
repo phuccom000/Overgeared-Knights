@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "knightsheraldry:hood"
+    }
+  ],
+  "result": {
+    "item": "knightsheraldry:helmet_hood"
+  }
+}
+

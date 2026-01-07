@@ -8,20 +8,19 @@
   "need_quenching": false,
   "needs_minigame": false,
   "pattern": [
-    " i ",
-    "ppp"
+    "xix",
+    " x "
   ],
   "key": {
     "i": {
-      "item": "knightsheraldry:houndskull"
-    },
-    "p": {
       "item": "overgeared:steel_plate"
+    },
+    "x": {
+      "item": "overgeared:steel_nugget"
     }
   },
   "result": {
-    "item": "knightsheraldry:great_houndskul_bascinet",
+    "item": "knightsheraldry:gauntlet",
     "count": 1
-  },
-  "show_notification": true
+  }
 }

@@ -3,25 +3,20 @@
   "category": "armors",
   "hammering": 3,
   "has_polishing": false,
-  "has_quality": true,
+  "has_quality": false,
   "minimum_quality": "poor",
   "need_quenching": false,
   "needs_minigame": false,
   "pattern": [
-    " i ",
-    "ppp"
+    "x x"
   ],
   "key": {
-    "i": {
-      "item": "knightsheraldry:houndskull"
-    },
-    "p": {
-      "item": "overgeared:steel_plate"
+    "x": {
+      "item": "overgeared:steel_ingot"
     }
   },
   "result": {
-    "item": "knightsheraldry:great_houndskul_bascinet",
+    "item": "knightsheraldry:rim_guards",
     "count": 1
-  },
-  "show_notification": true
+  }
 }

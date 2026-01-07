@@ -8,19 +8,19 @@
   "need_quenching": false,
   "needs_minigame": false,
   "pattern": [
-    " i ",
-    "ppp"
+    "i",
+    "p"
   ],
   "key": {
     "i": {
-      "item": "knightsheraldry:houndskull"
+      "item": "knightsheraldry:plate_cuirass"
     },
     "p": {
-      "item": "overgeared:steel_plate"
+      "item": "overknights:tassets"
     }
   },
   "result": {
-    "item": "knightsheraldry:great_houndskul_bascinet",
+    "item": "knightsheraldry:plate_cuirass_tassets",
     "count": 1
   },
   "show_notification": true

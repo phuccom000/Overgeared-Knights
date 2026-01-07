@@ -8,19 +8,23 @@
   "need_quenching": false,
   "needs_minigame": false,
   "pattern": [
-    " i ",
-    "ppp"
+    "i i",
+    "apa",
+    "apa"
   ],
   "key": {
-    "i": {
-      "item": "knightsheraldry:houndskull"
+    "a": {
+      "item": "overgeared:steel_plate"
     },
     "p": {
-      "item": "overgeared:steel_plate"
+      "item": "overgeared:steel_ingot"
+    },
+    "i": {
+      "item": "overgeared:steel_nugget"
     }
   },
   "result": {
-    "item": "knightsheraldry:great_houndskul_bascinet",
+    "item": "knightsheraldry:maximillian_cuirass",
     "count": 1
   },
   "show_notification": true

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " L ",
+    "L L"
+  ],
+  "key": {
+    "L": {
+      "item": "overknights:woolen_patch"
+    }
+  },
+  "result": {
+    "item": "knightsheraldry:hood",
+    "count": 1
+  }
+}

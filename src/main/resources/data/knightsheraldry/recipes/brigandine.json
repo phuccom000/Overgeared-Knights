@@ -8,20 +8,20 @@
   "need_quenching": false,
   "needs_minigame": false,
   "pattern": [
-    " i ",
-    "ppp"
+    "xLx",
+    "LxL",
+    "xLx"
   ],
   "key": {
-    "i": {
-      "item": "knightsheraldry:houndskull"
-    },
-    "p": {
+    "x": {
       "item": "overgeared:steel_plate"
+    },
+    "L": {
+      "item": "overknights:leather_patch"
     }
   },
   "result": {
-    "item": "knightsheraldry:great_houndskul_bascinet",
+    "item": "knightsheraldry:brigandine",
     "count": 1
-  },
-  "show_notification": true
+  }
 }

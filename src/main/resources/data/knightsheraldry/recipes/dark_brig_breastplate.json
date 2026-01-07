@@ -8,19 +8,19 @@
   "need_quenching": false,
   "needs_minigame": false,
   "pattern": [
-    " i ",
-    "ppp"
+    "pip",
+    " p "
   ],
   "key": {
     "i": {
-      "item": "knightsheraldry:houndskull"
+      "item": "knightsheraldry:dark_brigandine"
     },
     "p": {
       "item": "overgeared:steel_plate"
     }
   },
   "result": {
-    "item": "knightsheraldry:great_houndskul_bascinet",
+    "item": "knightsheraldry:dark_brig_breastplate",
     "count": 1
   },
   "show_notification": true

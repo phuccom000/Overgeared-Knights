@@ -8,19 +8,20 @@
   "need_quenching": false,
   "needs_minigame": false,
   "pattern": [
-    " i ",
-    "ppp"
+    "i i",
+    "pip",
+    " p "
   ],
   "key": {
     "i": {
-      "item": "knightsheraldry:houndskull"
+      "item": "overgeared:steel_plate"
     },
     "p": {
-      "item": "overgeared:steel_plate"
+      "item": "overgeared:steel_ingot"
     }
   },
   "result": {
-    "item": "knightsheraldry:great_houndskul_bascinet",
+    "item": "knightsheraldry:xiiii_plate_breastplate",
     "count": 1
   },
   "show_notification": true
