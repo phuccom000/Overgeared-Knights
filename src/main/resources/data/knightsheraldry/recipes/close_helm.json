@@ -1,0 +1,30 @@
+{
+  "type": "overgeared:forging",
+  "category": "armors",
+  "hammering": 4,
+  "has_polishing": false,
+  "has_quality": true,
+  "minimum_quality": "poor",
+  "need_quenching": false,
+  "needs_minigame": false,
+  "pattern": [
+    "aia",
+    " p "
+  ],
+  "key": {
+    "i": {
+      "item": "knightsheraldry:barbute"
+    },
+    "a": {
+      "item": "overgeared:steel_ingot"
+    },
+    "p": {
+      "item": "overgeared:steel_plate"
+    }
+  },
+  "result": {
+    "item": "knightsheraldry:close_helm",
+    "count": 1
+  },
+  "show_notification": true
+}

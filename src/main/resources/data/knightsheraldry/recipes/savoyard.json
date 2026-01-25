@@ -8,22 +8,20 @@
   "need_quenching": false,
   "needs_minigame": false,
   "pattern": [
-    " c ",
-    "cic",
-    " c "
+    " i ",
+    " p "
   ],
   "key": {
     "i": {
-      "item": "knightsheraldry:great_helm"
+      "item": "knightsheraldry:burgonet"
     },
-    "c": {
-      "item": "minecraft:gold_nugget"
+    "p": {
+      "item": "overgeared:steel_ingot"
     }
   },
   "result": {
-    "item": "knightsheraldry:great_helm_2",
+    "item": "knightsheraldry:savoyard",
     "count": 1
   },
   "show_notification": true
 }
-

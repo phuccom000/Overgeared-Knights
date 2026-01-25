@@ -1,0 +1,30 @@
+{
+  "type": "overgeared:forging",
+  "category": "armors",
+  "hammering": 4,
+  "has_polishing": false,
+  "has_quality": true,
+  "minimum_quality": "poor",
+  "need_quenching": false,
+  "needs_minigame": false,
+  "pattern": [
+    "pip",
+    "p p"
+  ],
+  "key": {
+    "i": {
+      "item": "overgeared:steel_ingot"
+    },
+    "a": {
+      "item": "overgeared:steel_nugget"
+    },
+    "p": {
+      "item": "overgeared:steel_plate"
+    }
+  },
+  "result": {
+    "item": "knightsheraldry:burgonet",
+    "count": 1
+  },
+  "show_notification": true
+}
