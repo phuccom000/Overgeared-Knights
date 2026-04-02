@@ -1,0 +1,26 @@
+{
+  "type": "overgeared:forging",
+  "category": "armors",
+  "hammering": 4,
+  "has_polishing": false,
+  "has_quality": true,
+  "minimum_quality": "poor",
+  "need_quenching": false,
+  "pattern": [
+    "iii",
+    "iai"
+  ],
+  "key": {
+    "i": {
+      "item": "minecraft:gold_ingot"
+    },
+    "a": {
+      "item": "knightsheraldry:greaves"
+    }
+  },
+  "result": {
+    "item": "knightsheraldry:golden_greaves",
+    "count": 1
+  },
+  "show_notification": true
+}

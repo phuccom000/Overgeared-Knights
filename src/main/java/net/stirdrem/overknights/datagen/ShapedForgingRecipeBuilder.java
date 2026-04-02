@@ -4,12 +4,14 @@ import com.google.common.collect.Lists;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import net.minecraft.advancements.Advancement;
+import net.minecraft.advancements.AdvancementRewards;
 import net.minecraft.advancements.CriterionTriggerInstance;
+import net.minecraft.advancements.RequirementsStrategy;
+import net.minecraft.advancements.critereon.RecipeUnlockedTrigger;
 import net.minecraft.core.NonNullList;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.data.recipes.RecipeBuilder;
-import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.*;
@@ -17,8 +19,8 @@ import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.level.ItemLike;
 import net.stirdrem.overgeared.AnvilTier;
-import net.stirdrem.overgeared.ForgingBookCategory;
 import net.stirdrem.overgeared.ForgingQuality;
+import net.stirdrem.overgeared.client.ForgingBookCategory;
 import net.stirdrem.overgeared.recipe.ForgingRecipe;
 import net.stirdrem.overgeared.util.ModTags;
 
@@ -29,8 +31,7 @@ import java.util.Map;
 import java.util.function.Consumer;
 
 public class ShapedForgingRecipeBuilder implements RecipeBuilder {
-    private final RecipeCategory category;
-    private final ForgingBookCategory bookCategory;
+    private ForgingBookCategory category;
     private final Item result;
 
     private final int count;
@@ -62,13 +63,14 @@ public class ShapedForgingRecipeBuilder implements RecipeBuilder {
 
     @Nullable
     private ForgingQuality minimumQuality;
+    @Nullable
+    private ForgingQuality qualityDifficulty;
 
     private boolean showNotification = true;
 
 
-    public ShapedForgingRecipeBuilder(RecipeCategory category, ForgingBookCategory bookCategory, ItemLike result, int count, int hammering) {
+    public ShapedForgingRecipeBuilder(ForgingBookCategory category, ItemLike result, int count, int hammering) {
         this.category = category;
-        this.bookCategory = bookCategory;
         this.result = result.asItem();
         this.count = count;
         this.hammering = hammering;
@@ -90,19 +92,19 @@ public class ShapedForgingRecipeBuilder implements RecipeBuilder {
 
     private static ForgingBookCategory determineWeaponRecipeCategory(ItemLike pResult) {
         if (isTools(pResult.asItem()) || isToolPart(pResult.asItem())) {
-            return ForgingBookCategory.TOOLS;
+            return ForgingBookCategory.TOOL_HEADS;
         } else {
             return pResult.asItem() instanceof ArmorItem ? ForgingBookCategory.ARMORS : ForgingBookCategory.MISC;
         }
     }
 
 
-    public static ShapedForgingRecipeBuilder shaped(RecipeCategory category, ItemLike result, int hammering) {
-        return new ShapedForgingRecipeBuilder(category, determineWeaponRecipeCategory(result), result, 1, hammering);
+    public static ShapedForgingRecipeBuilder shaped(ForgingBookCategory category, ItemLike result, int hammering) {
+        return new ShapedForgingRecipeBuilder(category, result, 1, hammering);
     }
 
-    public static ShapedForgingRecipeBuilder shaped(RecipeCategory category, ItemLike result, int count, int hammering) {
-        return new ShapedForgingRecipeBuilder(category, determineWeaponRecipeCategory(result), result, count, hammering);
+    public static ShapedForgingRecipeBuilder shaped(ForgingBookCategory category, ItemLike result, int count, int hammering) {
+        return new ShapedForgingRecipeBuilder(category, result, count, hammering);
     }
 
     public ShapedForgingRecipeBuilder define(Character pSymbol, TagKey<Item> pTag) {
@@ -177,13 +179,18 @@ public class ShapedForgingRecipeBuilder implements RecipeBuilder {
 
     public ShapedForgingRecipeBuilder setBlueprint(String blueprintType) {
         if (blueprintType != null && !blueprintType.isBlank()) {
-            this.blueprintTypes.add(blueprintType.toLowerCase());
+            this.blueprintTypes.add(blueprintType.toLowerCase(java.util.Locale.ROOT));
         }
         return this;
     }
 
     public ShapedForgingRecipeBuilder minimumQuality(@Nullable ForgingQuality minimumQuality) {
         this.minimumQuality = minimumQuality;
+        return this;
+    }
+
+    public ShapedForgingRecipeBuilder qualityDifficulty(@Nullable ForgingQuality qualityDifficulty) {
+        this.qualityDifficulty = qualityDifficulty;
         return this;
     }
 
@@ -228,6 +235,11 @@ public class ShapedForgingRecipeBuilder implements RecipeBuilder {
             }
         }
 
+        this.advancement.parent(ROOT_RECIPE_ADVANCEMENT)
+                .addCriterion("has_the_recipe", RecipeUnlockedTrigger.unlocked(pRecipeId))
+                .rewards(AdvancementRewards.Builder.recipe(pRecipeId))
+                .requirements(RequirementsStrategy.OR);
+
         pRecipeOutput.accept(new Result(
                 ingredients,
                 this.hammering,
@@ -235,7 +247,7 @@ public class ShapedForgingRecipeBuilder implements RecipeBuilder {
                 pRecipeId,
                 this.failedResult != null ? new ItemStack(this.failedResult, this.failedResultCount) : ItemStack.EMPTY,
                 this.group == null ? "" : this.group,
-                this.bookCategory,
+                this.category,
                 this.rows,
                 this.key,
                 this.advancement,
@@ -247,8 +259,9 @@ public class ShapedForgingRecipeBuilder implements RecipeBuilder {
                 this.hasQuality != null && !this.hasQuality ? null : (this.hasPolishing != null ? this.hasPolishing : true),
                 this.hasQuality != null && this.hasQuality ? null : (this.needsMinigame != null && this.needsMinigame),
                 this.hasQuality != null && !this.hasQuality ? "" : (this.minimumQuality != null ? this.minimumQuality.getDisplayName() : ForgingQuality.POOR.getDisplayName()),
+                this.qualityDifficulty != null ? this.qualityDifficulty.getDisplayName() : ForgingQuality.NONE.getDisplayName(),
                 this.tier == null ? "" : this.tier,
-                this.needQuenching == null ? true : this.needQuenching // default true if not set
+                this.needQuenching == null || this.needQuenching
         ));
     }
 
@@ -287,9 +300,9 @@ public class ShapedForgingRecipeBuilder implements RecipeBuilder {
         private final String minimumQuality;
         private final String tier;
         private final Boolean needQuenching;
+        private final String qualityDifficulty;
 
-
-        public Result(NonNullList<Ingredient> ingredients, int hammering, ItemStack result, ResourceLocation id, ItemStack failedResult, String group, ForgingBookCategory category, List<String> pattern, Map<Character, Ingredient> key, Advancement.Builder advancement, ResourceLocation advancementId, boolean showNotification, List<String> blueprintTypes, Boolean requiresBlueprint, Boolean hasQuality, Boolean hasPolishing, Boolean needsMinigame, String minimumQuality, String tier, Boolean needQuenching) {
+        public Result(NonNullList<Ingredient> ingredients, int hammering, ItemStack result, ResourceLocation id, ItemStack failedResult, String group, ForgingBookCategory category, List<String> pattern, Map<Character, Ingredient> key, Advancement.Builder advancement, ResourceLocation advancementId, boolean showNotification, List<String> blueprintTypes, Boolean requiresBlueprint, Boolean hasQuality, Boolean hasPolishing, Boolean needsMinigame, String minimumQuality, String qualityDifficulty, String tier, Boolean needQuenching) {
             this.ingredients = ingredients;
             this.hammering = hammering;
             this.result = result;
@@ -308,6 +321,7 @@ public class ShapedForgingRecipeBuilder implements RecipeBuilder {
             this.hasPolishing = hasPolishing;
             this.needsMinigame = needsMinigame;
             this.minimumQuality = minimumQuality;
+            this.qualityDifficulty = qualityDifficulty;
             this.tier = tier;
             this.needQuenching = needQuenching;
         }
@@ -329,8 +343,11 @@ public class ShapedForgingRecipeBuilder implements RecipeBuilder {
                 }
                 json.add("blueprint", blueprintArray);
             }
+            if (this.category != null) {
+                json.addProperty("category", this.category.name().toLowerCase(java.util.Locale.ROOT));
+            }
 
-            json.addProperty("category", this.category.getSerializedName());
+            json.addProperty("group", this.group);
 
             JsonArray patternArray = new JsonArray();
             for (String s : this.pattern) {
@@ -350,7 +367,10 @@ public class ShapedForgingRecipeBuilder implements RecipeBuilder {
             if (!this.minimumQuality.isEmpty()) {
                 json.addProperty("minimum_quality", this.minimumQuality);
             }
-            if (this.needsMinigame != null || !this.needsMinigame) {
+            if (!this.qualityDifficulty.isEmpty()) {
+                json.addProperty("quality_difficulty", this.qualityDifficulty);
+            }
+            if (this.needsMinigame != null) {
                 json.addProperty("needs_minigame", this.needsMinigame);
             }
             if (this.needQuenching != null) {

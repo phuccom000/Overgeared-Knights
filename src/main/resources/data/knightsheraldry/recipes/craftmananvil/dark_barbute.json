@@ -1,0 +1,32 @@
+{
+  "type": "overgeared:forging",
+  "category": "armors",
+  "hammering": 4,
+  "has_polishing": false,
+  "has_quality": true,
+  "minimum_quality": "poor",
+  "need_quenching": false,
+  "pattern": [
+    "xix",
+    "abi"
+  ],
+  "key": {
+    "x": {
+      "item": "minecraft:basalt"
+    },
+    "i": {
+      "item": "minecraft:bone_meal"
+    },
+    "a": {
+      "item": "minecraft:copper_ingot"
+    },
+    "b": {
+      "item": "knightsheraldry:barbute"
+    }
+  },
+  "result": {
+    "item": "knightsheraldry:dark_barbute",
+    "count": 1
+  },
+  "show_notification": true
+}

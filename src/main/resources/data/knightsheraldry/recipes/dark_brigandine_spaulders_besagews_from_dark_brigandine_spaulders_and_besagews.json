@@ -7,12 +7,9 @@
     },
     {
       "item": "knightsheraldry:besagews"
-    },
-    {
-      "item": "knightsheraldry:rim_guards"
     }
   ],
   "result": {
-    "item": "knightsheraldry:dark_brigandine_spaulders"
+    "item": "knightsheraldry:dark_brigandine_spaulders_besagews"
   }
 }
